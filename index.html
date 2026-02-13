@@ -19,21 +19,37 @@
                 <a href="#" class="brand">
                     <i class="fas fa-terminal text-gradient"></i> aporcelli<span class="text-gradient">.</span>
                 </a>
+                <div class="lang-switch mobile-only-flex">
+                    <button class="lang-btn active" onclick="setLanguage('es')" title="Español">
+                        ES
+                    </button>
+                    <button class="lang-btn" onclick="setLanguage('en')" title="English">
+                        EN
+                    </button>
+                </div>
                 <button class="mobile-menu-btn" id="mobile-menu-toggle">
                     <i class="fas fa-bars"></i>
                 </button>
                 <ul class="nav-links" id="nav-menu">
-                    <li><a href="#about">Perfil</a></li>
-                    <li><a href="#experience">Experiencia</a></li>
-                    <li><a href="#certifications">Certificaciones</a></li>
-                    <li><a href="#education">Educación</a></li>
-                    <li><a href="#contact">Contacto</a></li>
+                    <li><a href="#about" data-i18n="nav_about">Perfil</a></li>
+                    <li><a href="#experience" data-i18n="nav_experience">Experiencia</a></li>
+                    <li><a href="#certifications" data-i18n="nav_certifications">Certificaciones</a></li>
+                    <li><a href="#education" data-i18n="nav_education">Educación</a></li>
+                    <li><a href="#contact" data-i18n="nav_contact">Contacto</a></li>
                     <li><a href="assets/pdf/CV ADRIAN PORCELLI_2026_compressed.pdf" target="_blank"
                             class="btn btn-outline"
                             style="padding: 0.4rem 1rem; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; height: fit-content;">
-                            <i class="fas fa-download"></i> Descarga CV
+                            <i class="fas fa-download"></i> <span data-i18n="nav_cv">Descarga CV</span>
                         </a></li>
                 </ul>
+                <div class="lang-switch desktop-only">
+                    <button class="lang-btn active" onclick="setLanguage('es')" title="Español">
+                        ES
+                    </button>
+                    <button class="lang-btn" onclick="setLanguage('en')" title="English">
+                        EN
+                    </button>
+                </div>
             </nav>
         </div>
     </header>
@@ -43,13 +59,14 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1 class="text-gradient">Architecting <br>the Cloud.</h1>
-                    <p>Especialista en <strong>Cloud Computing</strong>, enfocado en diseñar e implementar arquitecturas
+                    <h1 class="text-gradient" data-i18n="hero_title">Architecting <br>the Cloud.</h1>
+                    <p data-i18n="hero_subtitle">Especialista en <strong>Cloud Computing</strong>, enfocado en diseñar e
+                        implementar arquitecturas
                         escalables, seguras y de alto rendimiento. Presales Solution Architect con pasión por convertir
                         ideas innovadoras en soluciones reales.</p>
                     <div class="hero-btns">
-                        <a href="#contact" class="btn btn-primary">Trabajemos Juntos</a>
-                        <a href="#experience" class="btn btn-outline">Ver Experiencia</a>
+                        <a href="#contact" class="btn btn-primary" data-i18n="btn_contact_work">Trabajemos Juntos</a>
+                        <a href="#experience" class="btn btn-outline" data-i18n="btn_exp">Ver Experiencia</a>
                     </div>
                 </div>
             </div>
@@ -61,8 +78,10 @@
         <section id="about">
             <div class="container">
                 <div class="glass">
-                    <h2 class="text-gradient" style="margin-bottom: 2rem;">Perfil Profesional</h2>
-                    <p style="font-size: 1.15rem; color: var(--text-secondary); max-width: 900px;">
+                    <h2 class="text-gradient" style="margin-bottom: 2rem;" data-i18n="about_title">Perfil Profesional
+                    </h2>
+                    <p style="font-size: 1.15rem; color: var(--text-secondary); max-width: 900px;"
+                        data-i18n="about_desc">
                         Motivado por convertir ideas innovadoras en soluciones reales que generarán valor tangible para
                         usuarios y negocios. Con más de 15 años en la industria IT, he evolucionado desde la
                         administración de sistemas Linux hasta el liderazgo de equipos y el diseño de complejas
@@ -75,13 +94,15 @@
         <!-- Experience Section -->
         <section id="experience">
             <div class="container">
-                <h2 class="text-gradient" style="margin-bottom: 4rem; font-size: 2.5rem;">Trayectoria Profesional</h2>
+                <h2 class="text-gradient" style="margin-bottom: 4rem; font-size: 2.5rem;" data-i18n="exp_title">
+                    Trayectoria Profesional</h2>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <span class="date">2026 - Presente</span>
+                        <span class="date" data-i18n="exp_tucloud_date">2026 - Presente</span>
                         <span class="company">tuCloud pro</span>
-                        <h3>Profesional independiente - Consultoría Cloud & IA</h3>
-                        <p>Especialista en optimización de costos y arquitectura de infraestructura para inteligencia
+                        <h3 data-i18n="exp_tucloud_title">Profesional independiente - Consultoría Cloud & IA</h3>
+                        <p data-i18n="exp_tucloud_desc">Especialista en optimización de costos y arquitectura de
+                            infraestructura para inteligencia
                             artificial. <a href="https://tucloud.pro" target="_blank"
                                 style="color: var(--gcp-blue); text-decoration: none;">Visitar tucloud.pro <i
                                     class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i></a></p>
@@ -90,8 +111,9 @@
                     <div class="timeline-item">
                         <span class="date">2020 - 2026</span>
                         <span class="company">Meriti - Broker de la Nube</span>
-                        <h3>Presales Solution Architect / Project Manager</h3>
-                        <p>Liderazgo de diseños técnicos para infraestructura Cloud y proyectos de IA. Especialista en
+                        <h3 data-i18n="exp_meriti_title">Presales Solution Architect / Project Manager</h3>
+                        <p data-i18n="exp_meriti_desc">Liderazgo de diseños técnicos para infraestructura Cloud y
+                            proyectos de IA. Especialista en
                             ecosistema GCP (Google Cloud Platform) y Workspace.</p>
                     </div>
 
@@ -139,7 +161,8 @@
         <!-- Certifications Section -->
         <section id="certifications" style="background: rgba(255,255,255,0.01);">
             <div class="container">
-                <h2 class="text-gradient" style="margin-bottom: 4rem; text-align: center;">Certificaciones Oficiales
+                <h2 class="text-gradient" style="margin-bottom: 4rem; text-align: center;" data-i18n="cert_title">
+                    Certificaciones Oficiales
                 </h2>
                 <div class="cert-grid">
                     <div class="cert-card glass">
@@ -149,8 +172,9 @@
                                 style="height: 120px; width: auto; object-fit: contain;">
                         </a>
                         <h3>Professional Cloud Architect</h3>
-                        <p>Google Cloud Certified</p>
-                        <span style="font-size: 0.8rem; opacity: 0.7;">Válido hasta: Mar 2027</span>
+                        <p data-i18n="cert_google">Google Cloud Certified</p>
+                        <span style="font-size: 0.8rem; opacity: 0.7;"><span data-i18n="cert_valid">Válido hasta</span>:
+                            Mar 2027</span>
                     </div>
                     <div class="cert-card glass">
                         <a href="assets/pdf/Professional Google Workspace Administrator_new_id_23-25.pdf"
@@ -160,8 +184,9 @@
                                 style="height: 120px; width: auto; object-fit: contain;">
                         </a>
                         <h3>Professional Workspace Administrator</h3>
-                        <p>Google Cloud Certified</p>
-                        <span style="font-size: 0.8rem; opacity: 0.7;">Válido hasta: Jun 2025</span>
+                        <p data-i18n="cert_google">Google Cloud Certified</p>
+                        <span style="font-size: 0.8rem; opacity: 0.7;"><span data-i18n="cert_valid">Válido hasta</span>:
+                            Jun 2025</span>
                     </div>
                     <div class="cert-card glass">
                         <a href="assets/pdf/Associate Cloud Engineer_new_id_22-25.pdf" target="_blank"
@@ -171,8 +196,9 @@
                                 style="height: 120px; width: auto; object-fit: contain;">
                         </a>
                         <h3>Associate Cloud Engineer</h3>
-                        <p>Google Cloud Certified</p>
-                        <span style="font-size: 0.8rem; opacity: 0.7;">Válido hasta: Ene 2025</span>
+                        <p data-i18n="cert_google">Google Cloud Certified</p>
+                        <span style="font-size: 0.8rem; opacity: 0.7;"><span data-i18n="cert_valid">Válido hasta</span>:
+                            Ene 2025</span>
                     </div>
                 </div>
             </div>
@@ -181,18 +207,20 @@
         <!-- Education Section -->
         <section id="education">
             <div class="container">
-                <h2 class="text-gradient" style="margin-bottom: 3rem;">Formación Técnica</h2>
+                <h2 class="text-gradient" style="margin-bottom: 3rem;" data-i18n="edu_title">Formación Técnica</h2>
                 <div class="grid">
                     <div class="card glass">
-                        <h3>Certificación CCNA</h3>
+                        <h3 data-i18n="edu_ccna_title">Certificación CCNA</h3>
                         <span class="company">Fundación Proydesa</span>
-                        <p>Networking avanzado, enrutamiento (OSPF, EIGRP), VLANs, seguridad WAN y VPN IPSec. Aprobado
+                        <p data-i18n="edu_ccna_desc">Networking avanzado, enrutamiento (OSPF, EIGRP), VLANs, seguridad
+                            WAN y VPN IPSec. Aprobado
                             con 97.3%.</p>
                     </div>
                     <div class="card glass">
-                        <h3>SysAdmin Linux Avanzado</h3>
+                        <h3 data-i18n="edu_linux_title">SysAdmin Linux Avanzado</h3>
                         <span class="company">Central Tech Argentina</span>
-                        <p>Especialización en Red Hat, CentOS y Ubuntu. Estructuración de redes y servidores Windows
+                        <p data-i18n="edu_linux_desc">Especialización en Red Hat, CentOS y Ubuntu. Estructuración de
+                            redes y servidores Windows
                             2003-2008.</p>
                     </div>
                 </div>
@@ -204,12 +232,14 @@
             <div class="container">
                 <div class="contact-container">
                     <div class="contact-info">
-                        <h2 class="text-gradient">¿Buscas un experto <br>en el siguiente nivel?</h2>
-                        <p>Hablemos sobre tu próximo reto tecnológico.</p>
+                        <h2 class="text-gradient" data-i18n="contact_title">¿Buscas un experto <br>en el siguiente
+                            nivel?</h2>
+                        <p data-i18n="contact_subtitle">Hablemos sobre tu próximo reto tecnológico.</p>
                         <ul class="contact-list">
                             <li><i class="fas fa-envelope"></i> <a href="mailto:adrian@porcelli.ar"
                                     style="color: inherit; text-decoration: none;">adrian@porcelli.ar</a></li>
-                            <li><i class="fas fa-location-dot"></i> Lomas de Zamora, Buenos Aires</li>
+                            <li><i class="fas fa-location-dot"></i> <span data-i18n="contact_location">Lomas de Zamora,
+                                    Buenos Aires</span></li>
                             <li><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/aporcelli"
                                     target="_blank"
                                     style="color: inherit; text-decoration: none;">linkedin.com/in/aporcelli</a></li>
@@ -218,19 +248,22 @@
                     <div class="glass">
                         <form id="portfolio-contact" action="https://formspree.io/f/mgolajwk" method="POST">
                             <div class="form-group">
-                                <label>Nombre</label>
-                                <input type="text" name="name" placeholder="Tu nombre" required>
+                                <label data-i18n="form_name">Nombre</label>
+                                <input type="text" name="name" placeholder="Tu nombre" data-placeholder="form_name_ph"
+                                    required>
                             </div>
                             <div class="form-group">
-                                <label>Email</label>
-                                <input type="email" name="email" placeholder="email@ejemplo.com" required>
+                                <label data-i18n="form_email">Email</label>
+                                <input type="email" name="email" placeholder="email@ejemplo.com"
+                                    data-placeholder="form_email_ph" required>
                             </div>
                             <div class="form-group">
-                                <label>Mensaje</label>
+                                <label data-i18n="form_message">Mensaje</label>
                                 <textarea name="message" rows="4" placeholder="¿Cómo puedo ayudarte?"
-                                    required></textarea>
+                                    data-placeholder="form_message_ph" required></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Mensaje</button>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;"
+                                data-i18n="form_btn">Enviar Mensaje</button>
                         </form>
                         <div id="form-status" class="form-status"></div>
                     </div>
@@ -241,11 +274,156 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Adrián Porcelli. Diseñado para el Futuro Cloud.</p>
+            <p data-i18n="footer_text">&copy; 2026 Adrián Porcelli. Diseñado para el Futuro Cloud.</p>
         </div>
     </footer>
 
     <script>
+        const translations = {
+            es: {
+                nav_about: "Perfil",
+                nav_experience: "Experiencia",
+                nav_certifications: "Certificaciones",
+                nav_education: "Educación",
+                nav_contact: "Contacto",
+                nav_cv: "Descarga CV",
+                hero_title: "Architecting <br>the Cloud.",
+                hero_subtitle: "Especialista en <strong>Cloud Computing</strong>, enfocado en diseñar e implementar arquitecturas escalables, seguras y de alto rendimiento. Presales Solution Architect con pasión por convertir ideas innovadoras en soluciones reales.",
+                btn_contact_work: "Trabajemos Juntos",
+                btn_exp: "Ver Experiencia",
+                about_title: "Perfil Profesional",
+                about_desc: "Motivado por convertir ideas innovadoras en soluciones reales que generarán valor tangible para usuarios y negocios. Con más de 15 años en la industria IT, he evolucionado desde la administración de sistemas Linux hasta el liderazgo de equipos y el diseño de complejas arquitecturas en Google Cloud y entornos híbridos.",
+                exp_title: "Trayectoria Profesional",
+                exp_tucloud_date: "2026 - Presente",
+                exp_tucloud_title: "Profesional independiente - Consultoría Cloud & IA",
+                exp_tucloud_desc: "Especialista en optimización de costos y arquitectura de infraestructura para inteligencia artificial. <a href='https://tucloud.pro' target='_blank' style='color: var(--gcp-blue); text-decoration: none;'>Visitar tucloud.pro <i class='fas fa-external-link-alt' style='font-size: 0.8rem;'></i></a>",
+                exp_meriti_title: "Presales Solution Architect / Project Manager",
+                exp_meriti_desc: "Liderazgo de diseños técnicos para infraestructura Cloud y proyectos de IA. Especialista en ecosistema GCP (Google Cloud Platform) y Workspace.",
+                cert_title: "Certificaciones Oficiales",
+                cert_google: "Google Cloud Certified",
+                cert_valid: "Válido hasta",
+                edu_title: "Formación Técnica",
+                edu_ccna_title: "Certificación CCNA",
+                edu_ccna_desc: "Networking avanzado, enrutamiento (OSPF, EIGRP), VLANs, seguridad WAN y VPN IPSec. Aprobado con 97.3%.",
+                edu_linux_title: "SysAdmin Linux Avanzado",
+                edu_linux_desc: "Especialización en Red Hat, CentOS y Ubuntu. Estructuración de redes y servidores Windows 2003-2008.",
+                contact_title: "¿Buscas un experto <br>en el siguiente nivel?",
+                contact_subtitle: "Hablemos sobre tu próximo reto tecnológico.",
+                contact_location: "Lomas de Zamora, Buenos Aires",
+                form_name: "Nombre",
+                form_name_ph: "Tu nombre",
+                form_email: "Email",
+                form_email_ph: "email@ejemplo.com",
+                form_message: "Mensaje",
+                form_message_ph: "¿Cómo puedo ayudarte?",
+                form_btn: "Enviar Mensaje",
+                form_sending: "Enviando...",
+                form_success_title: "¡Mensaje Enviado!",
+                form_success_desc: "Gracias por contactarme. Te responderé a la brevedad.",
+                form_error_title: "Error",
+                form_error_desc: "Hubo un problema al enviar el formulario.",
+                form_conn_error: "Hubo un problema de conexión. Intenta nuevamente.",
+                footer_text: "&copy; 2026 Adrián Porcelli. Diseñado para el Futuro Cloud."
+            },
+            en: {
+                nav_about: "Profile",
+                nav_experience: "Experience",
+                nav_certifications: "Certifications",
+                nav_education: "Education",
+                nav_contact: "Contact",
+                nav_cv: "Download CV",
+                hero_title: "Architecting <br>the Cloud.",
+                hero_subtitle: "Specialist in <strong>Cloud Computing</strong>, focused on designing and implementing scalable, secure, and high-performance architectures. Presales Solution Architect with a passion for turning innovative ideas into real solutions.",
+                btn_contact_work: "Let's Work Together",
+                btn_exp: "View Experience",
+                about_title: "Professional Profile",
+                about_desc: "Motivated to turn innovative ideas into real solutions that generate tangible value for users and businesses. With more than 15 years in the IT industry, I have evolved from Linux systems administration to team leadership and the design of complex architectures in Google Cloud and hybrid environments.",
+                exp_title: "Professional Career",
+                exp_tucloud_date: "2026 - Present",
+                exp_tucloud_title: "Freelance Professional - Cloud & AI Consulting",
+                exp_tucloud_desc: "Specialist in cost optimization and infrastructure architecture for artificial intelligence. <a href='https://tucloud.pro' target='_blank' style='color: var(--gcp-blue); text-decoration: none;'>Visit tucloud.pro <i class='fas fa-external-link-alt' style='font-size: 0.8rem;'></i></a>",
+                exp_meriti_title: "Presales Solution Architect / Project Manager",
+                exp_meriti_desc: "Leadership of technical designs for Cloud infrastructure and AI projects. Specialist in the GCP (Google Cloud Platform) and Workspace ecosystem.",
+                cert_title: "Official Certifications",
+                cert_google: "Google Cloud Certified",
+                cert_valid: "Valid until",
+                edu_title: "Technical Background",
+                edu_ccna_title: "CCNA Certification",
+                edu_ccna_desc: "Advanced networking, routing (OSPF, EIGRP), VLANs, WAN security, and IPSec VPN. Passed with 97.3%.",
+                edu_linux_title: "Advanced Linux SysAdmin",
+                edu_linux_desc: "Specialization in Red Hat, CentOS, and Ubuntu. Networking and Windows Server 2003-2008 setup.",
+                contact_title: "Looking for an expert <br>at the next level?",
+                contact_subtitle: "Let's talk about your next technical challenge.",
+                contact_location: "Lomas de Zamora, Buenos Aires",
+                form_name: "Name",
+                form_name_ph: "Your name",
+                form_email: "Email",
+                form_email_ph: "email@example.com",
+                form_message: "Message",
+                form_message_ph: "How can I help you?",
+                form_btn: "Send Message",
+                form_sending: "Sending...",
+                form_success_title: "Message Sent!",
+                form_success_desc: "Thank you for contacting me. I will respond to you shortly.",
+                form_error_title: "Error",
+                form_error_desc: "There was a problem sending the form.",
+                form_conn_error: "Connection problem. Please try again.",
+                footer_text: "&copy; 2026 Adrián Porcelli. Designed for the Cloud Future."
+            }
+        };
+
+        function setLanguage(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+
+            document.querySelectorAll('[data-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-placeholder');
+                if (translations[lang] && translations[lang][key]) {
+                    el.setAttribute('placeholder', translations[lang][key]);
+                }
+            });
+
+            // Update active state
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('onclick')?.includes(`'${lang}'`)) {
+                    btn.classList.add('active');
+                }
+            });
+
+            localStorage.setItem('adrian_site_lang', lang);
+        }
+
+        function detectAndSetLanguage() {
+            const savedLang = localStorage.getItem('adrian_site_lang');
+            if (savedLang) {
+                setLanguage(savedLang);
+                return;
+            }
+
+            const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+            const isLatam = timeZone.includes('Argentina') ||
+                timeZone.includes('Sao_Paulo') ||
+                timeZone.includes('Mexico') ||
+                timeZone.includes('Bogota') ||
+                timeZone.includes('Lima') ||
+                timeZone.includes('Santiago') ||
+                timeZone.includes('La_Paz') ||
+                timeZone.includes('Caracas');
+
+            const browserLang = navigator.language.slice(0, 2);
+
+            if (isLatam || browserLang === 'es') {
+                setLanguage('es');
+            } else {
+                setLanguage('en');
+            }
+        }
+
         // Header scroll effect
         window.addEventListener('scroll', () => {
             const header = document.getElementById('header');
@@ -288,6 +466,8 @@
             observer.observe(el);
         });
 
+        detectAndSetLanguage();
+
         // AJAX Form Handling
         const form = document.getElementById("portfolio-contact");
         if (form) {
@@ -300,7 +480,8 @@
 
                 // Loading State
                 submitBtn.disabled = true;
-                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+                const lang = localStorage.getItem('adrian_site_lang') || 'es';
+                submitBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> ${translations[lang].form_sending}`;
 
                 fetch(event.target.action, {
                     method: form.method,
@@ -313,7 +494,7 @@
                         // Success
                         form.style.display = "none";
                         status.className = "form-status success";
-                        status.innerHTML = `<i class="fas fa-check-circle"></i><h3>¡Mensaje Enviado!</h3><p>Gracias por contactarme. Te responderé a la brevedad.</p>`;
+                        status.innerHTML = `<i class="fas fa-check-circle"></i><h3>${translations[lang].form_success_title}</h3><p>${translations[lang].form_success_desc}</p>`;
                         status.style.display = "block";
                         form.reset();
                     } else {
@@ -321,10 +502,10 @@
                         response.json().then(data => {
                             if (Object.hasOwn(data, 'errors')) {
                                 status.className = "form-status error";
-                                status.innerHTML = `<i class="fas fa-exclamation-circle"></i><h3>Error</h3><p>${data["errors"].map(error => error["message"]).join(", ")}</p>`;
+                                status.innerHTML = `<i class="fas fa-exclamation-circle"></i><h3>${translations[lang].form_error_title}</h3><p>${data["errors"].map(error => error["message"]).join(", ")}</p>`;
                             } else {
                                 status.className = "form-status error";
-                                status.innerHTML = `<i class="fas fa-exclamation-circle"></i><h3>Error</h3><p>Hubo un problema al enviar el formulario.</p>`;
+                                status.innerHTML = `<i class="fas fa-exclamation-circle"></i><h3>${translations[lang].form_error_title}</h3><p>${translations[lang].form_error_desc}</p>`;
                             }
                             status.style.display = "block";
                             submitBtn.disabled = false;
@@ -334,7 +515,7 @@
                 }).catch(error => {
                     // Network error
                     status.className = "form-status error";
-                    status.innerHTML = `<i class="fas fa-exclamation-circle"></i><h3>Error</h3><p>Hubo un problema de conexión. Intenta nuevamente.</p>`;
+                    status.innerHTML = `<i class="fas fa-exclamation-circle"></i><h3>${translations[lang].form_error_title}</h3><p>${translations[lang].form_conn_error}</p>`;
                     status.style.display = "block";
                     submitBtn.disabled = false;
                     submitBtn.innerHTML = originalBtnText;
